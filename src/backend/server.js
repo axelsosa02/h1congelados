@@ -1,10 +1,12 @@
 import express from 'express';
 import cors from 'cors';
-import router from './mail.js';
+import router from './routes/mail.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://h1congelados.com.ar" // o poné tu dominio, ej: "https://h1congelados.com.ar"
+}));
 app.use(express.json());
 app.use('/', router);
 
