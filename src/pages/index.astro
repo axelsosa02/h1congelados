@@ -1,0 +1,30 @@
+---
+import '../styles/input.css'
+import Layout from '@components/Layout.astro'
+import Header from '@sections/Header.astro'
+import Hero from '@sections/Hero.astro'
+import Footer from '@sections/Footer.astro'
+import AboutUs from '@sections/AboutUs.astro'
+import Carrousel from '@components/Carrousel.astro'
+import Products from '@sections/Products.astro'
+import Services from '@sections/Services.astro'
+import Clientes from '@sections/Clientes.astro'
+import Contact from '@sections/Contact.astro'
+import Faq from '@sections/Faq.astro'
+---
+
+<Layout>
+	<div class="flex min-h-screen flex-col">
+		<Header/>
+		<div class="flex-1 pt-[138px] md:pt-[160px]">
+			<Hero/>
+			<AboutUs/>
+			<Products/>
+			<Services/>
+			<Clientes/>
+			<Faq/>
+			<Contact/>
+		</div>
+		<Footer/>
+	</div>
+</Layout>

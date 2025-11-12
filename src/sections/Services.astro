@@ -1,0 +1,21 @@
+---
+import CardService from "@components/CardService.astro"
+import SectionContainer from "@components/SectionContainer.astro"
+---
+
+<section id="servicios" class="scroll-mt-[120px] flex justify-center items-center py-20">
+    <SectionContainer class="w-full flex flex-col gap-10">
+    <div class="flex flex-col justify-center items-center gap-4">
+        <span class="font-bold text-xl text-secondary">Nuestros Servicios</span>
+        <h2 class="text-center font-extrabold text-4xl lg:text-5xl text-black uppercase">¿Que tipo de servicios ofrecemos?</h2>
+    </div>
+    <div class="flex flex-wrap gap-8 p-4 justify-center items-center">
+        <CardService name="Distribución de Hielo" description="Entrega rápida y directa a negocios, bares, restaurantes y eventos." iconUrl="icon-park-outline:transporter"/>
+        <CardService name="Venta minoritsa y mayorista" description="Atención personalizada para clientes particulares y distribuidores." iconUrl="tdesign:money"/>
+        <CardService name="Freezers a Comodato" description="Brindamos equipos de frío para puntos de venta, garantizando la mejor conservación y presentación del producto." iconUrl="material-symbols:mode-cool"/>
+        <CardService name="Caja térmica con equipo de frío" description="Ideal para conservar hielo o productos refrigerados en eventos o espacios al aire libre." iconUrl="game-icons:cooler"/>
+        <CardService name="Suministro Programado" description="Planificación de entregas recurrentes para garantizar disponibilidad constante de hielo en tu negocio." iconUrl="fluent-mdl2:market"/>
+        <CardService name="Provisión para Eventos" description="Hielo en cantidad para fiestas privadas y públicas, festivales, casamientos o eventos corporativos." iconUrl="fluent-emoji-high-contrast:ice"/>
+    </div>
+</SectionContainer>
+</section>

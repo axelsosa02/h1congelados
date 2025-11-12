@@ -1,0 +1,63 @@
+---
+const imagenes = [
+  "/H1-11.jpg",
+  "/img.jpg",
+  "/logoparaweb.png",
+];
+---
+
+<section class="relative w-full">
+  <div class="relative h-56 overflow-hidden md:h-[85dvh]">
+    {imagenes.map((img, index) => (
+      <img
+        src={img}
+        class={`carousel-item absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
+        alt={`Imagen ${index + 1}`}
+      />
+    ))}
+  </div>
+
+  <!-- Botones -->
+  <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-r-lg hover:bg-black/60">
+    ‹
+  </button>
+  <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-l-lg hover:bg-black/60">
+    ›
+  </button>
+</section>
+
+<!-- Script que se ejecuta en el cliente -->
+<script is:inline>
+   const items = document.querySelectorAll('.carousel-item');
+    let current = 0;
+
+    function showSlide(index) {
+    items.forEach((item, i) => {
+        item.classList.toggle('opacity-100', i === index);
+        item.classList.toggle('opacity-0', i !== index);
+    });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+    current = (current - 1 + items.length) % items.length;
+    showSlide(current);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+    current = (current + 1) % items.length;
+    showSlide(current);
+    });
+
+    setInterval(() => {
+    current = (current + 1) % items.length;
+    showSlide(current);
+    }, 5000);
+
+ 
+</script>
+
+<style>
+.carousel-item {
+  transition: opacity 0.7s ease-in-out;
+}
+</style>

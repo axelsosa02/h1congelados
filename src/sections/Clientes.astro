@@ -1,0 +1,17 @@
+---
+import SectionContainer from "@components/SectionContainer.astro";
+import SliderAuto from "@components/SliderAuto.astro";
+---
+
+<section class="flex flex-col justify-center items-center">
+    <SectionContainer class="min-h-[400px] w-full flex flex-col justify-center items-center gap-8">
+        <div class="flex items-center justify-center w-full">
+            <div class="flex-grow h-[2px] bg-primary opacity-80"></div>
+            <h2 class="px-4 text-center font-bold text-lg md:text-xl lg:text-2xl text-secondary">
+                NUESTROS CLIENTES DE CONFIANZA
+            </h2>
+            <div class="flex-grow h-[2px] bg-primary opacity-80"></div>
+        </div>
+        <SliderAuto />
+    </SectionContainer>
+</section>

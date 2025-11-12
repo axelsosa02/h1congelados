@@ -1,0 +1,114 @@
+---
+import SectionContainer from "@components/SectionContainer.astro"
+---
+
+<section>
+    <SectionContainer>
+        <div class="mx-auto p-4">
+            <div class="mb-4 flex gap-2  items-center border-b border-gray-300 pb-4">
+                <span class="iconify" data-icon="fluent-emoji-flat:ice" data-width="30" data-height="30"></span>
+                <h2 class="text-2xl font-semibold text-primary">Preguntas Frecuentes</h2>
+            </div>
+
+            <div class="divide-y divide-gray-300">
+                <div class="accordion" >
+                    <button type="button" class="toggle-button cursor-pointer w-full text-base outline-none text-left font-medium py-6 text-blue-700 hover:text-blue-700 flex gap-2 items-center">
+                        <span class="iconify" data-icon="material-symbols:mode-cool" data-width="24" data-height="24"></span>
+                        <span class="mr-4">¿Qué tipo de hielo ofrecen?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-current ml-auto shrink-0">
+                        <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+                        <path class="plus hidden" d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                        </svg>
+                    </button>
+                    <div class="content pb-6 max-h-[1000px] overflow-hidden transition-all duration-300">
+                        <p class="text-[15px] text-slate-600 leading-relaxed">
+                        Ofrecemos hielo estilo rolito. Nuestros productos son ideales para bares, eventos, restaurantes y uso doméstico.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion" >
+                    <button type="button" class="toggle-button cursor-pointer w-full text-base outline-none text-left gap-2 font-medium py-6 text-slate-900 hover:text-blue-700 flex items-center">
+                        <span class="iconify" data-icon="material-symbols:mode-cool" data-width="24" data-height="24"></span>
+                        <span class="mr-4">¿El hielo es apto para consumo?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-current ml-auto shrink-0">
+                        <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+                        <path class="plus" d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                        </svg>
+                    </button>
+                    <div class="content invisible max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-[15px] text-slate-600 leading-relaxed">
+                            Sí. Todo nuestro hielo es apto para consumo humano, elaborado bajo estrictos estándares de higiene y seguridad alimentaria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion" >
+                    <button type="button" class="toggle-button cursor-pointer w-full text-base outline-none text-left gap-2 font-medium py-6 text-slate-900 hover:text-blue-700 flex items-center">
+                        <span class="iconify" data-icon="material-symbols:mode-cool" data-width="24" data-height="24"></span>
+                        <span class="mr-4">¿Hacen entregas a domicilio?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-current ml-auto shrink-0">
+                        <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+                        <path class="plus" d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                        </svg>
+                    </button>
+                    <div class="content invisible max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-[15px] text-slate-600 leading-relaxed">
+                        ¡Por supuesto! Contamos con servicio de reparto propio y unidades refrigeradas que garantizan que el hielo llegue en perfectas condiciones hasta tu ubicación.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion" >
+                    <button type="button" class="toggle-button cursor-pointer w-full text-base outline-none text-left gap-2 font-medium py-6 text-slate-900 hover:text-blue-700 flex items-center">
+                        <span class="iconify" data-icon="material-symbols:mode-cool" data-width="24" data-height="24"></span>
+                        <span class="mr-4">¿En qué zonas realizan envíos?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-current ml-auto shrink-0">
+                        <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+                        <path class="plus" d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                        </svg>
+                    </button>
+                    <div class="content invisible max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-[15px] text-slate-600 leading-relaxed">
+                            Realizamos entregas en Reconquista - Avellaneda y alrededores. Para envíos a otras localidades, podés consultarnos y coordinamos la mejor opción.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion" >
+                    <button type="button" class="toggle-button cursor-pointer w-full text-base outline-none text-left gap-2 font-medium py-6 text-slate-900 hover:text-blue-700 flex items-center">
+                        <span class="iconify" data-icon="material-symbols:mode-cool" data-width="24" data-height="24"></span>
+                        <span class="mr-4">¿Puedo visitar su local y comprar al por menor?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-current ml-auto shrink-0">
+                        <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+                        <path class="plus" d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                        </svg>
+                    </button>
+                    <div class="content invisible max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-[15px] text-slate-600 leading-relaxed">
+                            Totalmente! Nuestro local está abierto para compras al por menor. Estamos ubicados en Olessio 2080, en la ciudad de Reconquista - Santa fe.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion" >
+                    <button type="button" class="toggle-button cursor-pointer w-full text-base outline-none text-left gap-2 font-medium py-6 text-slate-900 hover:text-blue-700 flex items-center">
+                        <span class="iconify" data-icon="material-symbols:mode-cool" data-width="24" data-height="24"></span>
+                        <span class="mr-4">¿Tienen hielo las 24 horas?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] fill-current ml-auto shrink-0">
+                        <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+                        <path class="plus" d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                        </svg>
+                    </button>
+                    <div class="content invisible max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-[15px] text-slate-600 leading-relaxed">
+                            Contamos con atención durante el día y entregas programadas. Si necesitás hielo fuera de horario, podés contactarnos y lo solucionamos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </SectionContainer>
+</section>
+
+<script is:inline src="/js/faq.js" defer></script>

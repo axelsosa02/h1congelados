@@ -1,0 +1,100 @@
+---
+const imagenes = [
+  "/a3set.PNG",
+  "/parada9.PNG",
+  "/axion.png",
+  "/monks.png",
+  "/nito.png",
+  "/campo.png",
+  "/HIDDEN.png"
+];
+---
+<section
+  class="logos w-[100%] lg:w-[90%] py-10 mx-auto overflow-hidden bg-white relative flex justify-center items-center"
+  id="logos"
+>
+  <div class="logo-slide flex items-center gap-[110px]" id="slider">
+    {
+      imagenes.map((img) => (
+        <img
+          src={img}
+          alt="Logo del carrusel"
+          class="h-[60px]"
+        />
+      ))
+    }
+    {
+      // 🔹 Duplicamos directamente los logos dentro del mismo contenedor
+      imagenes.map((img) => (
+        <img
+          src={img}
+          alt="Logo del carrusel duplicado"
+          class="h-[60px]"
+        />
+      ))
+    }
+    {
+      // 🔹 Duplicamos directamente los logos dentro del mismo contenedor
+      imagenes.map((img) => (
+        <img
+          src={img}
+          alt="Logo del carrusel duplicado"
+          class="h-[60px]"
+        />
+      ))
+    }
+     {
+      // 🔹 Duplicamos directamente los logos dentro del mismo contenedor
+      imagenes.map((img) => (
+        <img
+          src={img}
+          alt="Logo del carrusel duplicado"
+          class="h-[60px]"
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .logo-slide {
+    display: flex;
+    align-items: center;
+    animation: slide 20s linear infinite;
+  }
+
+  .logos::before,
+  .logos::after {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+
+  .logos::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255));
+  }
+
+  .logos::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255));
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+
+<!-- <script is:inline>
+  let logos = document.getElementById('slider').cloneNode(true);
+  document.getElementById('logos').appendChild(logos);
+</script> -->

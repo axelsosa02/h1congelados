@@ -1,0 +1,16 @@
+---
+import SectionContainer from "@components/SectionContainer.astro";
+import Card from "@components/Card.astro";
+---
+
+<section id="productos" class="scroll-mt-[120px] w-full  flex justify-center items-center py-20 bg-gradient-to-b  from-secondary/80 to-transparent">
+    <SectionContainer class="w-full flex flex-col justify-center items-center gap-20">
+        <h2 class="font-bold text-4xl lg:text-5xl text-white">Nuestros Productos</h2>
+        <div class="w-full flex flex-wrap justify-center lg:justify-between items-center gap-8">
+            <Card name="Bolsa de Hielo 2KG" />
+            <Card name="Bolsa de Hielo 4KG" />
+            <Card name="Bolsa de Hielo 10KG" />
+            <Card name="Bolsa de Hielo 14KG" />
+        </div>
+    </SectionContainer>
+</section>

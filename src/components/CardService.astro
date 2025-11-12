@@ -1,0 +1,23 @@
+---
+type Props = {
+    name?: string;
+    description?: string;
+    iconUrl?: string;
+}
+
+const {name = "Card Component" , description = "Card component", iconUrl} = Astro.props;
+---
+
+<div
+  class="group w-[330px] h-[340px] rounded-xl 
+         border-2 border-secondary 
+         transition-colors duration-300 ease-in-out 
+         hover:shadow-lg hover:bg-primary/80"
+>
+  <div class="flex flex-col justify-center gap-4 items-start p-6 
+              transition-all duration-300">
+    <span class="iconify rounded-full text-secondary bg-gray-100 p-4" data-icon={iconUrl} data-width="90" data-height="90"></span>
+    <span class="text-secondary font-bold text-[22px]">{name}</span>
+    <p class="text-start text-gray-700 font-semibold transition-colors duration-300 ease-in-out group-hover:text-white">{description}</p>
+  </div>
+</div>
