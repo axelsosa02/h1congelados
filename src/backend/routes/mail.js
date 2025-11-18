@@ -11,7 +11,7 @@ router.post('/enviar-mail', async (req, res) => {
     try {
         await resend.emails.send({
             from: "H1Congelados <onboarding@resend.dev>",
-            to: [process.env.EMAIL_USER],
+            to: ["h1eloreconquista@gmail.com"],
             replyTo: email,
             subject: `Nuevo mensaje de ${name}`,
             text: message
