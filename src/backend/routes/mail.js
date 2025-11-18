@@ -1,27 +1,19 @@
 import express from 'express';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 const router = express.Router();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 //creamos la ruta
 router.post('/enviar-mail', async (req, res) => {
     const {name, email, message} = req.body;
 
-    // Configuramos el transporte del correo
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASSWORD
-        }
-    });
-
-
     try {
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            replyTo: `${name} <${email}>`,
-            subject: "Nuevo mensaje de contacto H1Congelados",
+        await resend.emails.send({
+            from: "H1Congelados <onboarding@resend.dev>",
+            to: [process.env.EMAIL_USER],
+            replyTo: email,
+            subject: `Nuevo mensaje de ${name}`,
             text: message
         })
         res.status(200).json({success: true, message: 'Correo enviado correctamente'});
