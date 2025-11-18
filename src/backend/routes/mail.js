@@ -9,19 +9,18 @@ router.post('/enviar-mail', async (req, res) => {
 
     // Configuramos el transporte del correo
     const transporter = nodemailer.createTransport({
-        host : "smtp.gmail.com",
-        port: 587,
-        secure: false,
+        service: "gmail",
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASSWORD
         }
     });
 
+
     try {
         await transporter.sendMail({
-            from: `${name} <${email}>`,
-            to: process.env.EMAIL_USER,
+            from: process.env.EMAIL_USER,
+            replyTo: `${name} <${email}>`,
             subject: "Nuevo mensaje de contacto H1Congelados",
             text: message
         })
