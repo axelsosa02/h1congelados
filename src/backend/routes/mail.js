@@ -10,7 +10,7 @@ router.post('/enviar-mail', async (req, res) => {
 
     try {
         await resend.emails.send({
-            from: "H1Congelados <contacto@h1congelados.com.ar>",
+            from: `${name} <contacto@h1congelados.com.ar>`,
             to: ["h1eloreconquista@gmail.com"],
             reply_to: email,
             subject: `Nuevo mensaje de ${name}`,
