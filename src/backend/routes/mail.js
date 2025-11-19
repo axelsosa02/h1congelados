@@ -10,12 +10,12 @@ router.post('/enviar-mail', async (req, res) => {
 
     try {
         await resend.emails.send({
-            from: "H1Congelados <onboarding@resend.dev>",
+            from: "H1Congelados <contacto@h1congelados.com.ar>",
             to: ["h1eloreconquista@gmail.com"],
-            replyTo: email,
+            reply_to: email,
             subject: `Nuevo mensaje de ${name}`,
             text: message
-        })
+        });
         res.status(200).json({success: true, message: 'Correo enviado correctamente'});
     } catch (error) {
         console.error('Error al enviar el correo:', error);
