@@ -30,6 +30,15 @@ import SectionContainer from "@components/SectionContainer.astro"
                             />
                         </div>
                         <div>
+                            <label class="text-secondary text-sm font-medium mb-2 block">Número de Teléfono</label>
+                            <input
+                                type="number"
+                                name="number"
+                                placeholder="Número de Teléfono"
+                                class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm text-slate-900 focus:border-secondary outline-0"
+                            />
+                        </div>
+                        <div>
                             <label class="text-secondary text-sm font-medium mb-2 block">Mensaje</label>
                             <textarea
                                 placeholder="Mensaje"
@@ -39,6 +48,7 @@ import SectionContainer from "@components/SectionContainer.astro"
                             ></textarea>
                         </div>
                         <button
+                            id="openModal"
                             type="submit"
                             class="w-full text-sm border-2 border-primary hover:bg-primary hover:text-white text-primary font-medium py-3 px-6 rounded-lg transition-colors cursor-pointer"
                             >
@@ -105,6 +115,8 @@ import SectionContainer from "@components/SectionContainer.astro"
     </SectionContainer>
 </section>
 
+<script is:inline src="/js/modal.js" defer></script>
 <script is:inline src="/js/contacto.js" defer></script>
+
 
 
